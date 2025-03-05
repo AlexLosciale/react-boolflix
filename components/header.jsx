@@ -1,10 +1,11 @@
-import navbar from "./navbar";
+import Navbar from "./navbar";
 
-const header = () => {
+const Header = ({ setMovies }) => {
   return (
     <header>
-        {navbar()}
+        <Navbar setMovies={setMovies} />
     </header>
   );
 };
-export default header;
+
+export default Header;
