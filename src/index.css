@@ -36,6 +36,40 @@
 
 .main{
     display: flex;
-    margin: 3% 7%;
-    border: 1px solid #564c4c;
+    margin: 1% 7%;
+}
+
+.movies-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+}
+
+.movie-card {
+    width: calc(25% - 40px);
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.movie-card h3 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.movie-card img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.movie-card p {
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+.lista-uno{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
