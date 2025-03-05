@@ -1,11 +1,13 @@
-
+import header from "../components/header";
+import main from "../components/main";
 
 function App() {
   return (
-   <div>
-     <h1>App</h1>
-   </div>
+    <div>
+      {header()}
+      {main()}
+    </div>
   )
-}
+};
 
-export default App
+export default App;
