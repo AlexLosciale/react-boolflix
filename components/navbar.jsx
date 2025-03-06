@@ -1,14 +1,20 @@
-import { useState, useContext } from 'react';
+import { useState, useContext, useEffect } from 'react';
 import SerchContext from '../context/SerchContext';
 import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
     const [localQuery, setLocalQuery] = useState('');
-    const { setQuery } = useContext(SerchContext);
+    const { query, setQuery } = useContext(SerchContext);
 
     const handleSearch = () => {
         setQuery(localQuery);
     };
+
+    useEffect(() => {
+        console.log('query', query);
+        
+        setLocalQuery(query);
+    }, [query]);
 
     return (
         <nav>
@@ -30,7 +36,7 @@ const Navbar = () => {
                 <div>
                     <input 
                         type="text" 
-                        placeholder="Cerca" 
+                        placeholder="⌕" 
                         value={localQuery} 
                         onChange={(e) => setLocalQuery(e.target.value)}
                     />

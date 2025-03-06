@@ -7,7 +7,7 @@
 header{
     text-align: center;
     padding: 5px 0;
-    background-color: #564c4c;
+    background-color: #1d191982;
     position: sticky;
     top: 0; 
 }
@@ -17,7 +17,7 @@ header{
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
-    background-color: #564c4c;
+    background-color: #1d191900;
     color: white;
     padding: 10px 5px;
 }
@@ -33,7 +33,7 @@ a{
 }
 
 .nav-wrapper h1:hover{
-    color: #ff0202;
+    color: #000000;
     cursor: pointer;
 }
 
@@ -45,12 +45,16 @@ a{
     border-radius: 5px;
     cursor: pointer;
 }
-
 .nav-wrapper input{
     padding: 5px 10px;
     border: none;
     border-radius: 5px;
     margin-right: 10px;
+    text-decoration-color: #ffffff;
+}
+
+.nav-wrapper input::placeholder {
+    color: #aaaaaa;
 }
 
 .nav-wrapper ul li{
@@ -65,7 +69,13 @@ a{
 }
 
 .nav-wrapper ul li a:hover {
-    color: #ff0202;
+    color: #000000;
+}
+
+.nav-wrapper input[type="text"]{
+    background-color: #ffffff00;
+    border: 1px solid rgba(255, 255, 255, 0.427);
+    border-radius: 5%;
 }
 
 .main{
