@@ -1,5 +1,6 @@
 import { useState, useContext } from 'react';
 import SerchContext from '../context/SerchContext';
+import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
     const [localQuery, setLocalQuery] = useState('');
@@ -13,6 +14,14 @@ const Navbar = () => {
         <nav>
             <div className="nav-wrapper">
                 <h1><strong>BOOLFLIX</strong></h1>
+                <ul>
+                    <li>
+                        <NavLink to="/" activeClassName="active">FILM</NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/tv" activeClassName="active">SERIE TV</NavLink>
+                    </li>
+                </ul>
                 <div>
                     <input 
                         type="text" 

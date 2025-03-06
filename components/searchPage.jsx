@@ -4,7 +4,7 @@ import SerchContext from '../context/SerchContext';
 const API_KEY = '5e886869f2fb80bac715071e2808f651'; 
 const BASE_URL = 'https://api.themoviedb.org/3';
 
-export default SearchPage = () => {
+const SearchPage = () => {
     const [movies, setMovies] = useState([]);
     const query = useContext(SerchContext).query;
 
@@ -47,3 +47,5 @@ const MovieCard = ({ movie }) => {
         </div>
     );
 };
+
+export default SearchPage;

@@ -42,6 +42,17 @@ header{
     margin-right: 10px;
 }
 
+.nav-wrapper ul li{
+    display: inline;
+    margin: 0 10px;
+}
+
+.nav-wrapper ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
 .main{
     display: flex;
     margin: 1% 7%;
