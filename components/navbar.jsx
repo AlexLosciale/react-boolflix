@@ -16,10 +16,13 @@ const Navbar = () => {
                 <h1><strong>BOOLFLIX</strong></h1>
                 <ul>
                     <li>
-                        <NavLink to="/" activeClassName="active">FILM</NavLink>
+                        <NavLink to="/" activeClassName="active">HOME</NavLink>
                     </li>
                     <li>
-                        <NavLink to="/tv" activeClassName="active">SERIE TV</NavLink>
+                        <NavLink to="/film" activeClassName="active">FILM</NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/serie" activeClassName="active">SERIE TV</NavLink>
                     </li>
                 </ul>
                 <div>

@@ -1,7 +1,7 @@
 const SearchTV = () => {
   return (
     <div>
-        <h1 className="lista-uno">RISULTATI FILM</h1>
+        <h1 className="lista-uno">RISULTATI SERIE TV</h1>
     </div>
   );
 };

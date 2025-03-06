@@ -1,23 +1,25 @@
-import { BrowserRouter, Routes, Route} from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useState } from 'react';
 import Header from "../components/header";
+import Home from "../components/home";
 import SearchPage from "../components/searchPage";
-import serchTV from "../components/serchTv";
-import SerchContext from "../context/SerchContext";
+import SearchTV from "../components/serchTv";
+import SearchContext from "../context/serchContext";
 
 function App() {
   const [query, setQuery] = useState('');
 
   return (
-    <SerchContext.Provider value={{ query, setQuery }}>
+    <SearchContext.Provider value={{ query, setQuery }}>
       <BrowserRouter> 
         <Header />
         <Routes>
-          <Route path="/" element={<SearchPage />} />
-          <Route path="/tv" element={<serchTV />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/film" element={<SearchPage />} />
+          <Route path="/serie" element={<SearchTV />} />
         </Routes>
       </BrowserRouter>
-    </SerchContext.Provider>
+    </SearchContext.Provider>
   );
 };
 
