@@ -3,12 +3,16 @@ import Main from "../components/main";
 import { useState } from 'react';
 
 function App() {
-  const [movies, setMovies] = useState([]);
+  const [query, setQuery] = useState('');
+
+  const handleSearch = (searchQuery) => {
+    setQuery(searchQuery);
+  };
 
   return (
     <div>
-      <Header setMovies={setMovies} />
-      <Main movies={movies} />
+      <Header onSearch={handleSearch} />
+      <Main query={query} />
     </div>
   );
 };

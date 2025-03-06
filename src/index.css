@@ -4,6 +4,14 @@
     box-sizing: border-box;
 }
 
+header{
+    text-align: center;
+    padding: 5px 0;
+    background-color: #564c4c;
+    position: sticky;
+    top: 0; 
+}
+
 .nav-wrapper{
     display: flex;
     justify-content: space-between;

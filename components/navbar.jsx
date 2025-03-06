@@ -1,17 +1,8 @@
 import { useState } from 'react';
 
-const API_KEY = '5e886869f2fb80bac715071e2808f651';
-const BASE_URL = 'https://api.themoviedb.org/3';
-
-const Navbar = ({ setMovies }) => {
+const Navbar = ({onSearch}) => {
     const [query, setQuery] = useState('');
-
-    const fetchMovies = () => {
-        fetch(`${BASE_URL}/search/movie?query=${query}&language=en-US&page=1&api_key=${API_KEY}`)
-            .then(res => res.json())
-            .then(data => setMovies(data.results))
-            .catch(err => console.error(err));
-    };
+    const handleSearch = () => {onSearch(query);};
 
     return (
         <nav>
@@ -20,11 +11,11 @@ const Navbar = ({ setMovies }) => {
                 <div>
                     <input 
                         type="text" 
-                        placeholder="Cerca film" 
+                        placeholder="Cerca" 
                         value={query} 
                         onChange={(e) => setQuery(e.target.value)}
                     />
-                    <button onClick={fetchMovies}>Cerca</button>
+                    <button onClick={handleSearch}>Cerca</button>
                 </div>
             </div>
         </nav>
