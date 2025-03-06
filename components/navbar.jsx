@@ -13,7 +13,9 @@ const Navbar = () => {
     return (
         <nav>
             <div className="nav-wrapper">
+            <NavLink to="/" activeClassName="active">
                 <h1><strong>BOOLFLIX</strong></h1>
+            </NavLink>
                 <ul>
                     <li>
                         <NavLink to="/" activeClassName="active">HOME</NavLink>

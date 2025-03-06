@@ -1,5 +1,6 @@
 import { useState, useEffect, useContext } from 'react';
 import SerchContext from '../context/SerchContext';
+import ShowCard from './showCard';
 
 const API_KEY = '5e886869f2fb80bac715071e2808f651'; 
 const BASE_URL = 'https://api.themoviedb.org/3';
@@ -26,25 +27,11 @@ const SearchPage = () => {
             <div className="main">
                 <div className="movies-grid">
                     {movies.map(movie => (
-                        <MovieCard key={movie.id} movie={movie} />
+                        <ShowCard key={movie.id} movie={movie} />
                     ))}
                 </div>
             </div>
         </>
-    );
-};
-
-const MovieCard = ({ movie }) => {
-    const imageUrl = movie.poster_path 
-        ? `https://image.tmdb.org/t/p/w500${movie.poster_path}`
-        : 'https://via.placeholder.com/200';
-    
-    return (
-        <div className="movie-card">
-            <img src={imageUrl} alt={movie.title} />
-            <h3>{movie.title}</h3>
-            <p>Uscita: {movie.release_date || 'Data non disponibile'}</p>
-        </div>
     );
 };
 

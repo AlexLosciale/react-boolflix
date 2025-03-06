@@ -4,7 +4,7 @@ import Header from "../components/header";
 import Home from "../components/home";
 import SearchPage from "../components/searchPage";
 import SearchTV from "../components/serchTv";
-import SearchContext from "../context/serchContext";
+import SearchContext from "../context/SerchContext";
 
 function App() {
   const [query, setQuery] = useState('');
