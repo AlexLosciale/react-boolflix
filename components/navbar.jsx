@@ -20,7 +20,7 @@ const Navbar = () => {
         <nav>
             <div className="nav-wrapper">
             <NavLink to="/" activeClassName="active">
-                <h1><strong>BOOLFLIX</strong></h1>
+                <img src="BOOLFLIX_logo.png" alt="" />
             </NavLink>
                 <ul>
                     <li>
