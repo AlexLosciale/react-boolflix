@@ -1,19 +1,16 @@
-import Header from "../components/header";
-import Main from "../components/main";
 import { useState } from 'react';
+import Header from "../components/header";
+import SearchPage from "../components/searchPage";
+import SerchContext from "../context/SerchContext";
 
 function App() {
   const [query, setQuery] = useState('');
 
-  const handleSearch = (searchQuery) => {
-    setQuery(searchQuery);
-  };
-
   return (
-    <div>
-      <Header onSearch={handleSearch} />
-      <Main query={query} />
-    </div>
+    <SerchContext.Provider value={{ query, setQuery }}>
+      <Header />
+      <SearchPage />
+    </SerchContext.Provider>
   );
 };
 

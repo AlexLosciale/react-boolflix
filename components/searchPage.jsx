@@ -1,10 +1,12 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
+import SerchContext from '../context/SerchContext';
 
 const API_KEY = '5e886869f2fb80bac715071e2808f651'; 
 const BASE_URL = 'https://api.themoviedb.org/3';
 
-const Main = ({ query }) => {
+export default SearchPage = () => {
     const [movies, setMovies] = useState([]);
+    const query = useContext(SerchContext).query;
 
     useEffect(() => {
         if(!query){return;}       
@@ -45,5 +47,3 @@ const MovieCard = ({ movie }) => {
         </div>
     );
 };
-
-export default Main;

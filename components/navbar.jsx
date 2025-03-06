@@ -1,8 +1,13 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
+import SerchContext from '../context/SerchContext';
 
-const Navbar = ({onSearch}) => {
-    const [query, setQuery] = useState('');
-    const handleSearch = () => {onSearch(query);};
+const Navbar = () => {
+    const [localQuery, setLocalQuery] = useState('');
+    const { setQuery } = useContext(SerchContext);
+
+    const handleSearch = () => {
+        setQuery(localQuery);
+    };
 
     return (
         <nav>
@@ -12,8 +17,8 @@ const Navbar = ({onSearch}) => {
                     <input 
                         type="text" 
                         placeholder="Cerca" 
-                        value={query} 
-                        onChange={(e) => setQuery(e.target.value)}
+                        value={localQuery} 
+                        onChange={(e) => setLocalQuery(e.target.value)}
                     />
                     <button onClick={handleSearch}>Cerca</button>
                 </div>
