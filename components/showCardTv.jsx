@@ -8,6 +8,7 @@ const ShowCardTv = ({ movie }) => {
             <img src={imageUrl} alt={movie.title} />
             <h3>{movie.original_name}</h3>
             <p>Uscita: {movie.first_air_date || 'Data non disponibile'}</p>
+            <p>Voto: {Math.floor(movie.vote_average)}</p>
         </div>
     );
 };

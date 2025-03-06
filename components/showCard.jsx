@@ -8,6 +8,7 @@ const ShowCard = ({ movie }) => {
             <img src={imageUrl} alt={movie.title} />
             <h3>{movie.title}</h3>
             <p>Uscita: {movie.release_date || 'Data non disponibile'}</p>
+            <p>Voto: {Math.floor(movie.vote_average)}</p>
         </div>
     );
 };
